@@ -1,0 +1,35 @@
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
+public class Alunoo extends JanelaGenerica {
+	JButton matricula;
+	JButton catalogo;
+	JButton sair;
+	JButton pagar;
+	private ImageIcon iImagem;//imagem
+	private JLabel lblImagem;//imagem label
+	public Alunoo() {
+		
+		iImagem = new ImageIcon(getClass().getResource("perfil.jpg"));
+		lblImagem = new JLabel(iImagem);
+		matricula = new JButton("Matricula");
+		lblImagem.setBounds(0, 0,52,50);
+		add(lblImagem);
+		matricula.setBounds(12,52,100,30);
+		add(matricula);
+		catalogo = new JButton("Catálogo");
+		catalogo.setBounds(115,52,100,30);
+		sair = new JButton("Logout");
+		sair.setBounds(330,52,100,30);
+		pagar = new JButton("Pagar");
+		pagar.setBounds(225,52,100,30);
+		setSize(450,300);
+		add(pagar);
+		add(sair);
+		add(catalogo);
+	}
+	public static void main(String[] args) {
+		new Alunoo();
+	}
+}
