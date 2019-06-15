@@ -1,4 +1,4 @@
-# FES
+package Vieew;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 
@@ -11,19 +11,26 @@ public class JanelaGenerica extends JFrame{
 
 	private ImageIcon iiImagem;//imagem
 	private JLabel lbImagem;//imagem label
-	
+	private JLabel logo;
 	public JanelaGenerica(){
 
-		setSize(500,400);
+		setSize(400,333);
 		setUndecorated(true);//Tira borda
 		setLocationRelativeTo(null);
 		setLayout(null);
-		iiImagem = new ImageIcon(getClass().getResource("janela2.jpg"));
+		logo = new JLabel("SAU - Sistema de Acompanhamento Universitario");
+		iiImagem = new ImageIcon(getClass().getResource("margem.png"));
 		lbImagem = new JLabel(iiImagem);
-		lbImagem.setBounds(0, 0, getWidth(), getHeight());
+		lbImagem.setBounds(0, 0,50,55);
+		logo.setBounds(55, 0,280,55);
 		add(lbImagem);
+		add(logo);
 
 		setVisible(true);
 		
+	}
+
+	public static void main(String[] args) {
+		new JanelaGenerica();
 	}
 }
