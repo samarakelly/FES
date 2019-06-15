@@ -1,35 +1,32 @@
+package Vieew;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-public class Alunoo extends JanelaGenerica {
+//ok
+public class Aluno extends TelaLogado {
 	JButton matricula;
 	JButton catalogo;
 	JButton sair;
 	JButton pagar;
-	private ImageIcon iImagem;//imagem
-	private JLabel lblImagem;//imagem label
-	public Alunoo() {
+	public Aluno() {
 		
-		iImagem = new ImageIcon(getClass().getResource("perfil.jpg"));
-		lblImagem = new JLabel(iImagem);
+
 		matricula = new JButton("Matricula");
-		lblImagem.setBounds(0, 0,52,50);
-		add(lblImagem);
-		matricula.setBounds(12,52,100,30);
+		matricula.setBounds(0,68,100,30);
 		add(matricula);
 		catalogo = new JButton("Catálogo");
-		catalogo.setBounds(115,52,100,30);
+		catalogo.setBounds(100,68,100,30);
 		sair = new JButton("Logout");
-		sair.setBounds(330,52,100,30);
+		sair.setBounds(300,68,100,30);
 		pagar = new JButton("Pagar");
-		pagar.setBounds(225,52,100,30);
-		setSize(450,300);
+		pagar.setBounds(200,68,100,30);
+		setSize(400,333);
 		add(pagar);
 		add(sair);
 		add(catalogo);
 	}
 	public static void main(String[] args) {
-		new Alunoo();
+		new Aluno();
 	}
 }
